@@ -27,6 +27,7 @@ System.out.println(c3.equals(c4));
  }
  Pelicula p1=new Pelicula(name,anio);
   Pelicula p2=new Pelicula(name,anio);
+  System.out.println(p1==p2);
  
 }
 }
