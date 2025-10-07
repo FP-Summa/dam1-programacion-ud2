@@ -40,5 +40,7 @@ System.out.println(cuenta.saldo);
 // - ¿Por qué registrarOperacion es private en lugar de public?
 // Porque es un Método privado → solo lo usa la propia clase
 
+
+
 }
 }
