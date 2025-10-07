@@ -12,11 +12,13 @@ public class DatosUsuario {
         String email = sc.nextLine();
         System.out.print("Introduce tu edad: ");
         int edad = sc.nextInt();
-               boolean emailValido = ProcesadorTexto.esEmailValido(email); 
-            Usuario usuario = new Usuario(nombre, edad, email); 
-        } else {
+               boolean emailValido = ProcesadorTexto.esEmailValido(email); //utiliza un metodo estático de la clase ProcesadorTexto
+        if(emailValido){
+            Usuario usuario = new Usuario(nombre, edad, email); //crea un objeto (variable) nuevo de la clase Usuario
+            usuario.mostrarInformacion();
+        }else{
             System.out.println("El usuario no puede ser creado porque el email introducido no es válido");
-        
-       
+        }
+        sc.close();
     }
 }
