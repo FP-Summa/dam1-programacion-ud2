@@ -9,9 +9,9 @@ public class GestorTareas {
         // No necesita devolver nada, solo imprimir por consola.
 
         // Tu código aquí ↓
-      
- String nombre=Bienvenida("hola");
-System.out.println(nombre);
+    
+ Bienvenida("hola");
+
         // ================================
         // EJERCICIO 2: Duración total
         // ================================
@@ -39,7 +39,7 @@ System.out.println(nombre);
         // y muestre un mensaje como:
         // "📌 [Prioridad 2] Revisar correo".
         // Solo muestra el mensaje, no devuelve nada.
-
+Recordatorios("hola", 2);
         // Tu código aquí ↓
 
         // ================================
@@ -51,7 +51,8 @@ System.out.println(nombre);
         // Muestra el resultado de llamar al método con ambos casos.
 
         // Tu código aquí ↓
-
+ System.out.println(Tarea(true));
+ System.out.println(Tarea(false));
         // ================================
         // EJERCICIO 6: Productividad
         // ================================
@@ -88,7 +89,7 @@ System.out.println(nombre);
     // Aquí debéis crear los métodos fuera del main ↓↓↓
     // Ejericio1
     public static void Bienvenida(String name) {
-       
+       System.out.println(name);
         
     }
 
@@ -96,22 +97,19 @@ System.out.println(nombre);
     public static int Duracion(int a, int b) {
         return (a + b);
     }
-    // Ejercicio3
-    ;
-
-    public static void cantidad(boolean tiempo) {
-
+    //Ejercicio 4
+    public static void Recordatorios(String tarea,int prioridad){
+                if(prioridad>=1 && prioridad<=3){
+System.out.println("["+"prioridad "+prioridad+"]"+tarea);
+        }
     }
-
-    // Ejercicio 4
-    // Ejercicio 5
-    public static boolean Tarea(boolean tarea) {
+    
+        // Ejercicio 5
+    public static String Tarea(boolean tarea) {
         if (tarea) {
-            System.out.println("Completada");
-            return (tarea);
+                    return ("Completada");
         } else {
-            System.out.println("Pendiente");
-            return (tarea);
+                        return ("Pendiente");
         }
         // Ejercicio6
 
