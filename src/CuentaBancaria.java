@@ -1,4 +1,5 @@
 public class CuentaBancaria {
+<<<<<<< Updated upstream
 private double saldo;
 public void depositar(double cantidad) {
 if(cantidad>0) {
@@ -16,5 +17,7 @@ else {
     public double getSaldo() {
         return saldo ;
     }
+=======
+>>>>>>> Stashed changes
 
 }

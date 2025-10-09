@@ -20,6 +20,7 @@ System.out.println(cuenta.saldo);
         // 1. Ingresa 100€ usando depositar().
         // 2. Retira 30€ usando retirar().
         // 3. Imprime el saldo con getSaldo().
+<<<<<<< Updated upstream
                 cuenta.depositar(100);          
         cuenta.retirar(30);             
         System.out.println(cuenta.getSaldo());
@@ -42,5 +43,23 @@ System.out.println(cuenta.saldo);
 
 
 
+=======
+        class CuentaBancaria {
+                private double saldo;
+                public void depositar(double cantidad) {
+                        saldo+=cantidad;
+                }
+                public void retirar(double cantidad){
+                        saldo-=cantidad;
+                }
+                public double getSaldo() {
+                        return saldo;
+                }
+        CuentaBancaria cuenta = new CuentaBancaria();
+        cuenta.depositar(100);          
+        cuenta.retirar(30);             
+        System.out.println(cuenta.getSaldo());
+        }
+>>>>>>> Stashed changes
 }
 }
