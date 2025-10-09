@@ -29,7 +29,7 @@ public class GestorTareas {
         // y muestre en pantalla cuántas horas y minutos son.
         // Ejemplo: 150 minutos → "Son 2 horas y 30 minutos".
         // No tiene que devolver nada.
-
+cantidad(150);
         // Tu código aquí ↓
 
         // ================================
@@ -59,7 +59,7 @@ Recordatorios("hola", 2);
         // Crea un método que reciba el número total de tareas y las completadas
         // y devuelva el porcentaje de avance (por ejemplo, 70.0 si 7/10).
         // Muestra el resultado en consola.
-
+Productividad(10,8);
         // Tu código aquí ↓
 
         // ================================
@@ -71,7 +71,9 @@ Recordatorios("hola", 2);
         // {usuario} completaste {numero} de tareas"
         // que muestre un resumen personalizado.
         // Llama a ambos desde main.
-
+        Sobrecarga();
+Sobrecarga("Nicolas",10);
+    
         // Tu código aquí ↓
 
         // ================================
@@ -83,7 +85,8 @@ Recordatorios("hola", 2);
         // Muestra el texto en pantalla.
 
         // Tu código aquí ↓
-
+       String resultado= planificacion("estudiar", 150);
+        System.out.println(resultado);
     }
 
     // Aquí debéis crear los métodos fuera del main ↓↓↓
@@ -96,6 +99,12 @@ Recordatorios("hola", 2);
     // Ejercicio2
     public static int Duracion(int a, int b) {
         return (a + b);
+    }
+    //Ejercicio 3
+    public static void cantidad(int minutos){
+        int hora=minutos/60;
+        int minutosRestantes=minutos%60;
+        System.out.println("son "+hora+"y "+ minutosRestantes+"minutos");
     }
     //Ejercicio 4
     public static void Recordatorios(String tarea,int prioridad){
@@ -111,7 +120,23 @@ System.out.println("["+"prioridad "+prioridad+"]"+tarea);
         } else {
                         return ("Pendiente");
         }
-        // Ejercicio6
-
     }
+        // Ejercicio6
+public static void Productividad(int tareasTotal,int tareasCompletadas){
+    int tareas=(tareasTotal/tareasCompletadas*100);
+    System.out.println("Porcentaje de avance "+tareas);
 }
+    //Ejercicio 7
+    public static void Sobrecarga(){
+        System.out.println("Hola cracks");
+    }
+    public static void Sobrecarga(String name, int tareasCompletadas){
+        System.out.println("Nombre "+name+" tareas completadas "+tareasCompletadas);
+    }
+    //Ejercicio 8
+public static String planificacion(String tarea,int minutos){
+int horas=minutos/60;
+int minutosRestantes=minutos%60;
+return("el nombre de la tarea es "+tarea +"y dura "+minutos);
+}
+    }
